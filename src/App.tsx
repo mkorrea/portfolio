@@ -4,7 +4,6 @@ export function App() {
   return (
     <div>
       <Portfolio />
-      dasdsadasdasdasdasd
     </div>
   )
 }
