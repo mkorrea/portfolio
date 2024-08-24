@@ -1,22 +1,65 @@
-import { Github, Instagram, Linkedin, Menu } from 'lucide-react'
+import { Github, Home, Instagram, Languages, Laptop, Linkedin, Mail, Menu, User } from 'lucide-react'
 
 import homePhoto from './assets/math-photo.png'
 import logo from './assets/logo.png'
+import { useState } from 'react'
 
 export function Portfolio() {
+  const [ isMenuOpen, setIsMenuOpen ] = useState(false)
+  
+  function handleOpenMenu() {
+    if(!isMenuOpen){
+      setIsMenuOpen(true)
+    } else (
+      setIsMenuOpen(false)
+    )
+  }
+  
+  
   return (
     <div className="w-screen h-dvh flex justify-center overflow-x-hidden">
 
-      <header className='w-screen h-12 fixed flex justify-between items-center px-10 bg-bg-header/20 backdrop-blur-sm z-50'>
+      <header className={`w-screen ${isMenuOpen ? "h-fit" : "h-14" } transition-height duration-700 ease-in-out  py-2 fixed flex justify-between flex-col items-center bg-bg-header/20 backdrop-blur-sm z-50`}>
         {/* logo */}
-        <img 
-          className='h-8'
-          src={logo} 
-          alt="logo" 
-        />
-        <div>
-          <Menu />
+
+        <div className='w-full flex justify-between items-center px-10 '>
+          <img
+            className='h-8'
+            src={logo}
+            alt="logo"
+          />
+          <div>
+            <Menu size={26} onClick={handleOpenMenu}/>
+          </div>
         </div>
+
+        <div className={`w-full  ${isMenuOpen ? "opacity-100" : "opacity-0" } transition-all duration-700 ease-in-out  `}>
+          
+            <div className={`w-full flex flex-col gap-y-7 px-3 py-5 transition-all rounded-xl shadow-xl shadow-slate-950`}>
+              <div className='flex items-center gap-x-2 justify-center text-zinc-100 '>
+                <Home size={16} />
+                <p className="font-semibold leading-4  ">Início</p>
+              </div>
+              <div className='flex items-center gap-x-2 justify-center text-zinc-100'>
+                <User size={16} />
+                <p className="font-semibold leading-4  ">Sobre mim</p>
+              </div>
+              <div className='flex items-center gap-x-2 justify-center text-zinc-100'>
+                <Laptop size={16} />
+                <p className="font-semibold leading-4  ">Projetos</p>
+              </div>
+              <div className='flex items-center gap-x-2 justify-center text-zinc-100 bg-indigo-600 h-8 shadow-middle shadow-indigo-600 rounded-lg'>
+                <Mail size={16} />
+                <p className="font-semibold leading-4  ">Contato</p>
+              </div>
+              <div className='flex items-center gap-x-2 justify-center text-zinc-100'>
+                <Languages size={16} />
+                <p className="font-semibold leading-4  ">Idioma</p>
+              </div>
+            </div>
+         
+        </div>    
+
       </header>
 
 
