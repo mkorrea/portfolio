@@ -1,41 +1,72 @@
+import { Github, Instagram, Linkedin, Menu } from 'lucide-react'
 
-
-import homePhoto from './assets/photo-home.png'
+import homePhoto from './assets/home-photo.png'
+import logo from './assets/logo.png'
 
 export function Portfolio() {
   return (
     <div className="w-screen h-screen flex justify-center overflow-x-hidden">
-      <main className="w-[1920px] max-w-screen border-l-2 border-r-2 border-border px-3 ">
+
+      <header className='w-screen h-12 fixed flex justify-between items-center px-10 bg-bg-header/30 backdrop-blur-lg '>
+        {/* logo */}
+        <img 
+          className='h-8'
+          src={logo} 
+          alt="logo" 
+        />
+        <div>
+          <Menu />
+        </div>
+      </header>
+
+
+
+
+      <main className="w-[1920px] max-w-screen border-l-2 border-r-2 border-border px-3">
         
 
         {/* home */}
         <div className=' h-screen flex flex-col justify-end '>
 
-          <div className='relative w-full h-screen flex justify-center align-middle'>
+          <div className='relative w-full h-screen flex justify-center'>
             {/* presentation */}
             <div className='absolute mt-36 h-fit flex flex-col justify-center mx-auto gap-y-2 z-0  '>
               <p className='text-zinc-400 text-base'>
                 Olá! Eu me chamo
               </p>
-              <h1 className='flex text-4xl font-bold text-nowrap bg-gradient-to-r from-blue-400 via-indigo-500 to-indigo-600 text-transparent bg-clip-text '>
+              <h1 className='font-merienda flex text-4xl font-bold text-nowrap bg-gradient-to-r from-blue-400 via-indigo-500 to-indigo-600 text-transparent bg-clip-text '>
                 Matheus Correa
               </h1>
-              <h1 className='absolute flex text-4xl font-bold text-nowrap bg-gradient-to-r from-blue-400 via-indigo-500 to-indigo-600 text-transparent bg-clip-text text-shadow blur-md  '>
+              <h1 className='absolute font-merienda flex text-4xl font-bold text-nowrap bg-gradient-to-r from-blue-400 via-indigo-500 to-indigo-600 text-transparent bg-clip-text blur-sm  '>
                 Matheus Correa
               </h1>
               <p className='text-zinc-100 text-base text-center font-bold italic tracking-wider'>
                 Desenvolvedor Front-end
               </p>
+
+              <div className='w-full h-full absolute bg-shadow blur-3xl'>
+
+              </div>
             </div>
 
+
             {/* image */}
-            <div className="flex align-bottom justify-end mt-auto w-full h-fit ">
+            <div className="relative flex justify-between items-center mt-auto w-screen h-fit ">
+              <div className=' flex flex-col gap-y-6 text-zinc-400 bg-slate-700'>
+                <Github size={25} />
+                <Instagram size={25} />
+                <Linkedin size={25} />
+              </div>
               <img
-                className=' flex justify-end align-bottom object-contain object-right-bottom'
+                className=' flex flex-1 w-full justify-end object-contain object-right-bottom -mr-3 0'
                 src={homePhoto}
                 alt="Matheus Correa"
-                />
+              />
             </div>
+
+
+            {/* socials */}
+
 
           </div>
         </div>
@@ -49,6 +80,17 @@ export function Portfolio() {
 
       </main>
 
+
+
+
+        <div className="bg-animation">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+          <div id="stars4"></div>
+        </div>  
+
     </div>
   )
 }
+
