@@ -258,7 +258,6 @@
   -ms-animation: animStar 180s linear infinite;
   animation: animStar 180s linear infinite;
 }
-
 #stars:after {
   content: " ";
   position: absolute;
@@ -581,7 +580,6 @@
   -ms-animation: animStar 250s linear infinite;
   animation: animStar 250s linear infinite;
 }
-
 #stars2:after {
   content: " ";
   position: absolute;
@@ -657,7 +655,6 @@
     1439px 1423px #8C87DD, 26px 1881px #8C87DD, 802px 1564px #8C87DD,
     273px 708px #8C87DD, 40px 31px #8C87DD, 859px 108px #8C87DD;
 }
-
 #stars3 {
   border-radius: 2px;
   width: 3px;
@@ -703,7 +700,6 @@
   -ms-animation: animStar 300s linear infinite;
   animation: animStar 300s linear infinite;
 }
-
 #stars3:after {
   content: " ";
   position: absolute;
@@ -959,7 +955,6 @@
   -ms-animation: animStar 600s linear infinite;
   animation: animStar 600s linear infinite;
 }
-
 #stars4:after {
   content: " ";
   position: absolute;

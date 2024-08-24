@@ -1,13 +1,13 @@
 import { Github, Instagram, Linkedin, Menu } from 'lucide-react'
 
-import homePhoto from './assets/home-photo.png'
+import homePhoto from './assets/math-photo.png'
 import logo from './assets/logo.png'
 
 export function Portfolio() {
   return (
-    <div className="w-screen h-screen flex justify-center overflow-x-hidden">
+    <div className="w-screen h-dvh flex justify-center overflow-x-hidden">
 
-      <header className='w-screen h-12 fixed flex justify-between items-center px-10 bg-bg-header/30 backdrop-blur-lg '>
+      <header className='w-screen h-12 fixed flex justify-between items-center px-10 bg-bg-header/20 backdrop-blur-sm z-50'>
         {/* logo */}
         <img 
           className='h-8'
@@ -30,7 +30,7 @@ export function Portfolio() {
 
           <div className='relative w-full h-screen flex justify-center'>
             {/* presentation */}
-            <div className='absolute mt-36 h-fit flex flex-col justify-center mx-auto gap-y-2 z-0  '>
+            <div className='absolute mt-32 h-fit flex flex-col justify-center mx-auto gap-y-2 z-0  '>
               <p className='text-zinc-400 text-base'>
                 Olá! Eu me chamo
               </p>
@@ -52,13 +52,13 @@ export function Portfolio() {
 
             {/* image */}
             <div className="relative flex justify-between items-center mt-auto w-screen h-fit ">
-              <div className=' flex flex-col gap-y-6 text-zinc-400 bg-slate-700'>
-                <Github size={25} />
-                <Instagram size={25} />
-                <Linkedin size={25} />
+              <div className=' flex flex-col gap-y-8 text-zinc-400 '>
+                <Github size={30} />
+                <Instagram size={30} />
+                <Linkedin size={30} />
               </div>
               <img
-                className=' flex flex-1 w-full justify-end object-contain object-right-bottom -mr-3 0'
+                className='flex flex-1 w-full justify-end object-contain object-right-bottom -mr-3 '
                 src={homePhoto}
                 alt="Matheus Correa"
               />
