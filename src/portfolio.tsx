@@ -26,10 +26,9 @@ export function Portfolio() {
 
           <Navbar
             onMenuOpenChange={setIsMenuOpen}
-            className={`absolute backdrop-blur-lg bg-bg-color/50 shadow-xl shadow-bg-color/50 `}
+            className={`fixed backdrop-blur-lg bg-bg-color/50 shadow-xl shadow-bg-color/50 `}
             // shouldHideOnScroll
             isBlurred={false}
-          
           >
             <NavbarContent>
               <NavbarBrand>
@@ -44,38 +43,40 @@ export function Portfolio() {
                 className='sm:hidden'
               />
             </NavbarContent>
-            <NavbarContent className='hidden sm:flex'>
+            <NavbarContent className='hidden sm:flex sm:gap-x-36'>
               <NavbarItem>
-                <Link className="text-zinc-100" href='#home'>
+                <Link className="flex w-32 items-center justify-center px-3 gap-x-2 text-zinc-100 md:flex-col md:gap-y-1" href='#home'>
                   <Home size={16} />
-                  Inicio
+                  <p className="font-semibold leading-4  ">Início</p>
                 </Link>
               </NavbarItem>
               <NavbarItem>
-                <Link className="text-zinc-100" href='#home'>
+                <Link className="flex w-32 items-center justify-center px-3 gap-x-2 text-zinc-100 md:flex-col md:gap-y-1" href='#home'>
                   <User size={16} />
-                  Sobre mim
+                  <p className="font-semibold leading-4  ">Sobre mim</p>
                 </Link>
               </NavbarItem>
               <NavbarItem>
-                <Link className="text-zinc-100" href='#home'>
+              <Link className="flex w-32 items-center justify-center px-3 gap-x-2 text-zinc-100 md:flex-col md:gap-y-1" href='#home'>
                   <Laptop size={16} />
-                  Projetos
+                  <p className="font-semibold leading-4  ">Projetos</p>
                 </Link>
               </NavbarItem>
               <NavbarItem>
-                <Link className="text-zinc-100" href='#home'>
+                <Link className="flex w-32 items-center justify-center px-3 gap-x-2 text-zinc-100 md:flex-col md:gap-y-1 bg-indigo-600 py-2 -my-2 rounded-lg shadow-lg shadow-indigo-800" href='#home'>
                   <Mail size={16} />
-                  Contato
+                  <p className="font-semibold leading-4  ">Contato</p>
                 </Link>
               </NavbarItem>
               <NavbarItem>
-                <Link className="text-zinc-100" href='#home'>
+                <Link className="flex w-32 items-center justify-center px-3 gap-x-2 text-zinc-100 md:flex-col md:gap-y-1" href='#home'>
                   <Languages size={16} />
-                  Idioma
+                  <p className="font-semibold leading-4  ">Idioma</p>
                 </Link>
               </NavbarItem>
             </NavbarContent>
+
+            {/* menu mobile */}
             <NavbarMenu className='backdrop-blur-md bg-bg-color/30 py-6 flex gap-y-8 overflow-y-hidden'>
               <NavbarMenuItem >
                 <Link className="flex items-center gap-x-2 justify-center text-zinc-100" href='#home'>
@@ -112,7 +113,7 @@ export function Portfolio() {
 
 
 
-      <main className="w-[1920px] max-w-full border-l-2 border-r-2 border-border px-3 z-10">
+      <main className="w-[1920px] max-w-full border-x-2 border-border px-3 z-10">
         {/* home */}
         <div id='home' className=' h-screen flex flex-col justify-end'>
 
@@ -128,7 +129,7 @@ export function Portfolio() {
               <h1 className='absolute font-merienda flex text-[11vw] font-bold text-nowrap bg-gradient-to-r from-blue-400 via-indigo-500 to-indigo-600 text-transparent bg-clip-text blur-sm  '>
                 Matheus Correa
               </h1>
-              <p className='text-zinc-100 text-[3.9vw] text-center font-bold italic tracking-wider'>
+              <p className='text-zinc-100 text-[3.9vw] text-center font-bold italic tracking-widest'>
                 Desenvolvedor Front-end
               </p>
 
@@ -146,7 +147,7 @@ export function Portfolio() {
               </div>
               {/* image */} 
               <img
-                className='flex flex-1 w-full justify-end object-contain object-right-bottom -mr-3 '
+                className='flex flex-1 max-w-[450px] w-full justify-end object-contain object-right-bottom -mr-3 sm:max-w-[500px] md:max-w-[600px] transition-all ease'
                 src={homePhoto}
                 alt="Matheus Correa"
               />
@@ -199,7 +200,7 @@ alt="Matheus Correa"
 
       </main>
 
-      <div className="fixed top-0 left-0 w-full h-full z-0 opacity-[0.5]">
+      <div className="fixed top-0 left-0 w-full h-full z-0 opacity-[0.5] ">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
