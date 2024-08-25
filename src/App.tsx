@@ -1,9 +1,12 @@
+import { NextUIProvider } from "@nextui-org/system";
 import { Portfolio } from "./portfolio";
 
 export function App() {
   return (
     <div>
-      <Portfolio />
+      <NextUIProvider>
+        <Portfolio />
+      </NextUIProvider>
     </div>
   )
 }
