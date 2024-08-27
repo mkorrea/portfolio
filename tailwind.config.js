@@ -18,7 +18,8 @@ export default {
         'bg-header': '#272E45'
       },
       letterSpacing: {
-        'widest': '.22rem'
+        'wider': '.24rem',
+        'widest': '.36rem'
       },
       backgroundImage: {
         'shadow': 'linear-gradient(78.34deg, rgba(96, 165, 250, 0.29) 10.75%, rgba(79, 70, 229, 0.29) 71.7%, rgba(79, 70, 229, 0.1624) 96.81%)'
