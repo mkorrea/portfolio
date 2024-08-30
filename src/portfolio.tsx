@@ -238,7 +238,7 @@ export function Portfolio() {
 
             {/* photo */}
             <img
-              className=" flex max-w-md w-full ml-auto mb-0 mt-auto object-contain object-right-bottom overflow-y-hidden z-10
+              className=" flex max-w-md w-full ml-auto mb-0 mt-auto object-contain object-right-bottom  z-10
                 lg:max-w-lg lg:mt-auto
                 xl:max-w-xl 
                 2xl:max-w-2xl
