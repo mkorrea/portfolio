@@ -25,10 +25,11 @@ export default {
       },
       backgroundImage: {
         'shadow': 'linear-gradient(78.34deg, rgba(96, 165, 250, 0.29) 10.75%, rgba(79, 70, 229, 0.29) 71.7%, rgba(79, 70, 229, 0.1624) 96.81%)',
-        'quote-shadow': 'linear-gradient(0deg, #030611, #030611), linear-gradient(90deg, rgba(3, 5, 12, 0.04) 0%, rgba(7, 7, 19, 0.04) 20%, rgba(15, 13, 34, 0.04) 43.5%, rgba(15, 13, 34, 0.04) 60%, rgba(7, 7, 19, 0.04) 80%, rgba(3, 5, 12, 0.04) 100%)'
+        'quote-shadow': 'linear-gradient(to bottom, #03050C, #030611 95%, #03050C 10%)'
       },
       boxShadow: {
-        'middle': '0px 6px 8px'
+        'middle': '0px 0px 8px',
+        'middle-xl': '0px 0px 20px'
       },
       transitionProperty: {
         'height': 'height'
@@ -36,7 +37,20 @@ export default {
       backdropBlur: {
         'header': '12px',
         'header2': '5px'
-      }
+      },
+      keyframes: {
+        wave: {
+          '0%': { transform: 'rotate(0deg)' },
+          '20%': { transform: 'rotate(-20deg)' },
+          '40%': { transform: 'rotate(10deg)' },
+          '60%': { transform: 'rotate(-10deg)' },
+          '80%': { transform: 'rotate(5deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
+      },
+      animation: {
+        wave: 'wave 1s ease-in-out infinite',
+      },
     }
   },
   plugins: [nextui()],
