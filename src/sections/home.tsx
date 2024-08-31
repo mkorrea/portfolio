@@ -15,7 +15,8 @@ export function Home() {
         <div
           className="relative h-fit min-w-fit w-fit flex flex-col justify-center py-10 px-3 my-auto mt-10
           md:gap-y-1 
-          xl:my-auto xl:pl-14
+          xl:my-auto xl:ml-[3.5vw]
+          2xl:ml-[5vw]
           transition-all ease-linear duration-75 "
         >
           <p
