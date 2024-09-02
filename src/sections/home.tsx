@@ -7,7 +7,7 @@ import { StarsBackground } from "../components/stars-background";
 
 export function Home() {
   return ( 
-    <div id="home" className=" min-h-screen flex  items-end ">
+    <div id="home" className=" min-h-screen h-screen flex  items-end ">
       <div className="relative h-full w-full flex flex-col items-center z-10 pt-16  xl:flex-row overflow-y-hidden   ">
         <StarsBackground />
 
