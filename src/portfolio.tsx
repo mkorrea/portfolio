@@ -8,7 +8,6 @@ import { Home } from "./sections/home";
 import jsIcon from "./assets/javascript.svg"
 import tsIcon from "./assets/typescript.svg"
 import reactIcon from "./assets/react.svg"
-import viteIcon from "./assets/vite.svg"
 import tailwindIcon from "./assets/tailwind.svg"
 
 export function Portfolio() {
@@ -80,17 +79,37 @@ export function Portfolio() {
         </div>
 
 
-        <div className="flex justify-center">
-          <div className="w-full border border-indigo-600/80 rounded-lg shadow-tech  shadow-indigo-700 mx-3 max-w-7xl ">
-            <h2 className="text-center text-lg my-4">Tecnologias e ferramentas</h2>
-            <div className="flex flex-wrap justify-center transition-all ease-linear gap-x-10 p-6 lg:gap-x-24 xl:gap-x-32">
-              <img src={jsIcon} alt="js" className="w-20" />
-              <img src={tsIcon} alt="ts" className="w-20" />
-              <img src={reactIcon} alt="react" className="w-20" />
-              <img src={viteIcon} alt="vite" className="w-20" />
-              <img src={tailwindIcon} alt="tailwind" className="w-20" />
+        <div className="flex flex-col items-center">
+          <h2 className="text-center text-lg my-4">Principais habilidades</h2>
+          <div className="flex flex-wrap justify-center gap-y-4 gap-x-5">
+
+            <div 
+              style={{
+                transformStyle: 'preserve-3d'
+              }} 
+              className="w-36 flex justify-center items-center flex-col bg-indigo-950/10 border border-indigo-600/80 rounded-lg shadow-tech shadow-indigo-800 max-w-7xl ">
+              <img src={jsIcon} alt="js" className="w-16  mo-10" />
+              <h3>Javascript</h3>
+            </div>
+
+            <div className="w-36 flex justify-center items-center flex-col bg-indigo-950/10 border border-indigo-600/80 rounded-lg shadow-tech shadow-indigo-800 max-w-7xl ">
+              <img src={jsIcon} alt="js" className="w-16  mo-10" />
+              <h3>Javascript</h3>
+            </div>
+            <div className="w-36 flex justify-center items-center flex-col bg-indigo-950/10 border border-indigo-600/80 rounded-lg shadow-tech shadow-indigo-800 max-w-7xl ">
+              <img src={tsIcon} alt="ts" className="w-16  mo-10" />
+              <h3>Typescript</h3>
+            </div>
+            <div className="w-36 flex justify-center items-center flex-col bg-indigo-950/10 border border-indigo-600/80 rounded-lg shadow-tech shadow-indigo-800 max-w-7xl ">
+              <img src={reactIcon} alt="react" className="w-16  mo-10" />
+              <h3>React</h3>
+            </div>
+            <div className="w-36 flex justify-center items-center flex-col bg-indigo-950/10 border border-indigo-600/80 rounded-lg shadow-tech shadow-indigo-800 max-w-7xl ">
+              <img src={tailwindIcon} alt="tailwind" className="w-16  mo-10" />
+              <h3>Tailwind</h3>
             </div>
           </div>
+
         </div>
 
 

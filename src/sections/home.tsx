@@ -7,17 +7,17 @@ import { StarsBackground } from "../components/stars-background";
 
 export function Home() {
   return ( 
-    <div id="home" className=" min-h-screen h-screen flex  items-end ">
-      <div className="relative h-full w-full flex flex-col items-center z-10 pt-16  xl:flex-row overflow-y-hidden   ">
+    <div id="home" className=" min-h-full h- flex  items-end ">
+      <div className="relative h-full w-full flex flex-col items-center z-10 pt-16 overflow-y-hidden  xl:flex-row xl:   ">
         <StarsBackground />
 
         {/* presentation */}
         <div
           className="relative h-fit min-w-fit w-fit flex flex-col justify-center py-10 px-3 my-auto mt-10
           md:gap-y-1 
-          xl:my-auto xl:ml-[3.5vw]
+          xl:my-auto xl:ml-[3.1vw]
           2xl:ml-[5vw]
-          transition-all ease-linear duration-75 "
+          transition-all ease-linear duration-0 "
         >
           <p
             className="text-zinc-400 text-sm 
@@ -35,7 +35,7 @@ export function Home() {
               sm:text-6xl
               md:text-7xl
               lg:text-[76px]
-              xl:text-[6.5vw]
+              xl:text-[6.2vw]
               2xl:text-8xl
               transition-all ease-linear  duration-75 select-none"
             >
@@ -43,11 +43,11 @@ export function Home() {
             </h1>
             <h1
               className="absolute font-merienda flex text-[10vw] leading-none font-bold text-nowrap py-2
-              bg-gradient-to-r from-blue-400 via-indigo-500 to-indigo-600 text-transparent bg-clip-text blur-sm
+              bg-gradient-to-r from-blue-400 via-indigo-500 to-indigo-600 text-transparent bg-clip-text blur-[6px]
               sm:text-6xl
               md:text-7xl
               lg:text-[76px]
-              xl:text-[6.5vw]
+              xl:text-[6.2vw]
               2xl:text-8xl
               transition-all ease-linear  duration-75 select-none"
             >
@@ -70,15 +70,14 @@ export function Home() {
               delaySpeed={3000}
             />
           </p>
-          <div className="h-full w-full absolute left-1/2 -translate-x-1/2 bg-shadow blur-3xl opacity-90 "></div>
+          <div className="h-full w-full absolute left-1/2 -translate-x-1/2 bg-shadow blur-[130px] opacity-90 "></div>
         </div>
 
         {/* photo */}
         <img
           className=" flex max-w-md w-full ml-auto mb-0 mt-auto object-contain object-right-bottom  z-10
-            xl:max-w-xl 
-            2xl:max-w-2xl
-            select-none transition-all ease-linear duration-75"
+            xl:min-w-xl xl:max-w-2xl  2xl:mt-0
+            select-none transition-all ease-linear duration-0"
           src={homePhoto}
           alt="Matheus Correa"
         />
