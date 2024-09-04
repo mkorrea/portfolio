@@ -4,9 +4,10 @@ import { StarsBackground } from "./stars-background";
 interface SkillsCardProps {
   icon: string
   title: string
+  bgStyle: string
 }
 
-export function SkillsCard ({ icon, title }: SkillsCardProps) {
+export function SkillsCard ({ icon, title, bgStyle }: SkillsCardProps) {
 
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -76,7 +77,7 @@ export function SkillsCard ({ icon, title }: SkillsCardProps) {
         >
           {title}
         </h3>
-        <StarsBackground />
+        <StarsBackground skillCardStyle={bgStyle} />
       </div>
     </motion.div>
   )
