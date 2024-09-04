@@ -30,7 +30,8 @@ export default {
       boxShadow: {
         'middle': '0px 0px 8px',
         'middle-xl': '0px 0px 20px',
-        'tech': '0px 0px 12px, inset 0px 0px 12px'
+        'tech': '0px 0px 3px, inset 0px 0px 12px',
+        'tech-inset': ' inset 0px 0px 12px',
       },
       transitionProperty: {
         'height': 'height'
