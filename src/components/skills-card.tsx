@@ -14,8 +14,8 @@ export function SkillsCard ({ icon, title }: SkillsCardProps) {
   const mouseXSpring = useSpring(x)
   const mouseYSpring = useSpring(y)
 
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"])
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"])
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["11.5deg", "-11.5deg"])
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-11.5deg", "11.5deg"])
   
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const rect = (e.target as HTMLDivElement).getBoundingClientRect()
@@ -23,11 +23,12 @@ export function SkillsCard ({ icon, title }: SkillsCardProps) {
     const width = rect.width
     const height = rect.height
 
-    const mouseX = e.clientX - rect.left
+    const mouseX = e.clientX - rect.left - 40
     const mouseY = e.clientY - rect.top
-
+    
     const xPct = mouseX / width - 0.5
     const yPct = mouseY / height - 0.5
+    console.log(xPct)
 
     x.set(xPct)
     y.set(yPct)
@@ -54,7 +55,7 @@ export function SkillsCard ({ icon, title }: SkillsCardProps) {
     >
       <div 
         style={{
-          transform: 'translateZ(15px)',
+          transform: 'translateZ(13px)',
           transformStyle: 'preserve-3d'
         }}
         className="absolute flex flex-col items-center justify-center w-[150px] h-[112px] bg-bg-color rounded-lg    overflow-hidden transition-width duration-[5s] border border-indigo-600/0
@@ -64,13 +65,13 @@ export function SkillsCard ({ icon, title }: SkillsCardProps) {
         "
       >
         <img 
-          style={{ transform: 'translateZ(15px)' }} 
+          style={{ transform: 'translateZ(0px)' }} 
           src={icon} 
           alt="js" 
-          className="w-14  mo-10" 
+          className="w-14 " 
         />
         <h3 
-          style={{ transform: 'translateZ(15px)' }} 
+          style={{ transform: 'translateZ(0px)' }} 
           className="text-xs drop-shadow-2xl drop-shadow-zinc-100"
         >
           {title}

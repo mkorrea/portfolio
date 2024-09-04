@@ -79,9 +79,12 @@ export function Portfolio() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center overflow-hidden px-3">
+          
+        <div className="flex flex-col items-center overflow-hidden">
           <h2 className="text-center font-bold tracking-wide text-lg my-4">Principais habilidades</h2>
           <div className="flex flex-wrap justify-center gap-y-4 gap-x-5 transition-all duration-1000 lg:gap-x-7 xl:gap-x-10">
+
+            
             <SkillsCard 
               icon={jsIcon}
               title={"Javascript"}
