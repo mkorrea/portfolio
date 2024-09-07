@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^10.0.0",
     "@nextui-org/link": "^2.0.34",
     "@nextui-org/navbar": "^2.0.36",
     "@nextui-org/system": "^2.2.5",

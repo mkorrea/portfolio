@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { StarsBackground } from "./stars-background";
+import { useRef } from "react";
 
 interface SkillsCardProps {
   icon: string
@@ -8,39 +9,44 @@ interface SkillsCardProps {
 }
 
 export function SkillsCard ({ icon, title, bgStyle }: SkillsCardProps) {
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
-  const mouseXSpring = useSpring(x)
-  const mouseYSpring = useSpring(y)
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
 
-  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["11.5deg", "-11.5deg"])
-  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-11.5deg", "11.5deg"])
-  
+  const rotateX = useTransform(mouseYSpring, [-0.6, 0.6], ["13deg", "-13deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.6, 0.6], ["-13deg", "13deg"]);
+
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const rect = (e.target as HTMLDivElement).getBoundingClientRect()
+    if (!cardRef.current) return [0, 0];
 
-    const width = rect.width
-    const height = rect.height
+    const rect = cardRef.current.getBoundingClientRect(); 
 
-    const mouseX = e.clientX - rect.left - 40
-    const mouseY = e.clientY - rect.top
-    
-    const xPct = mouseX / width - 0.5
-    const yPct = mouseY / height - 0.5
-    console.log(xPct)
+    const width = rect.width;
+    const height = rect.height;
 
-    x.set(xPct)
-    y.set(yPct)
-  }
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+
+    x.set(xPct);
+    y.set(yPct);
+  };
+
   const handleMouseLeave = () => {
-    x.set(0)
-    y.set(0)
-  }
+    x.set(0);
+    y.set(0);
+  };
+  
   
   return (
     <motion.div
+      ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -48,35 +54,36 @@ export function SkillsCard ({ icon, title, bgStyle }: SkillsCardProps) {
         rotateY,
         transformStyle: 'preserve-3d'
       }} 
-      className="relative flex justify-center items-center w-[150px] h-[112px] from-blue-500/40 from-25% to-indigo-600/40 to-75% bg-gradient-to-br rounded-lg shadow-indigo-900 transition-width duration-[5s]
-        lg:w-[175px] lg:h-[131px] 
-        xl:w-[200px] xl:h-[150px]
-        2xl:w-[225px]
+      className="relative flex justify-center items-center w-[150px] h-[122px] from-blue-500 from-25% to-indigo-600 to-75% bg-gradient-to-br shadow-tech-inset shadow-bg-color rounded-3xl  transition-transform duration-150 ease-linear
+        lg:w-[175px] lg:h-[141px] 
+        xl:w-[200px] xl:h-[160px] 
+        2xl:w-[225px]   
       "
     >
       <div 
         style={{
-          transform: 'translateZ(13px)',
+          transform: 'translateZ(23px)',
           transformStyle: 'preserve-3d'
         }}
-        className="absolute flex flex-col items-center justify-center w-[150px] h-[112px] bg-bg-color rounded-lg    overflow-hidden transition-width duration-[5s] border border-indigo-600/0
-          lg:w-[175px] lg:h-[131px]
-          xl:w-[200px] xl:h-[150px]
-          2xl:w-[225px]
+        className="relative flex flex-col items-center justify-center w-[152px] h-[124px] bg-bg-color overflow-hidden shadow-tech shadow-bg-color rounded-3xl  transition-transform duration-150 ease-linear
+          lg:w-[177px] lg:h-[143px] 
+          xl:w-[202px] xl:h-[160px]
+          2xl:w-[227px]
         "
       >
-        <img 
-          style={{ transform: 'translateZ(0px)' }} 
-          src={icon} 
-          alt="js" 
-          className="w-14 " 
-        />
-        <h3 
-          style={{ transform: 'translateZ(0px)' }} 
-          className="text-xs drop-shadow-2xl drop-shadow-zinc-100"
-        >
-          {title}
-        </h3>
+        <div className="absolute flex flex-col items-center justify-center">
+          <img
+            src={icon}
+            alt={title}
+            className="w-14 xl:w-16 2xl:w-20 transition-all duration-1000 text-zinc-100 z-30  "
+            />
+          <h3
+            className="text-xs [text-shadow:0px_0px_8px_#f4f4f5] shadow-red-500  lg:text-sm xl:text-md 2xl:text-lg  "
+          >
+            {title}
+          </h3>
+          
+        </div>
         <StarsBackground skillCardStyle={bgStyle} />
       </div>
     </motion.div>

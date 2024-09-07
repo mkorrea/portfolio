@@ -12,7 +12,7 @@ export function Header() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       className={`fixed max-w-[1920px] mx-auto w-full backdrop-blur-lg bg-bg-color/50 shadow-xl shadow-bg-color/50 flex justify-center`}
-      shouldHideOnScroll
+      // shouldHideOnScroll
       isBlurred={false}
       isBordered
     >

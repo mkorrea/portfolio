@@ -3,17 +3,19 @@ import { SkillsCard } from "../components/skills-card";
 import { HandWaving } from "@phosphor-icons/react";
 
 import aboutPhoto from "../assets/about-photo.png"
-import jsIcon from "../assets/javascript.svg"
-import tsIcon from "../assets/typescript.svg"
-import reactIcon from "../assets/react.svg"
-import tailwindIcon from "../assets/tailwind.svg"
+import htmlIcon from "../assets/html-icon.svg"
+import cssIcon from "../assets/css-icon.svg"
+import jsIcon from "../assets/javascript-icon.svg"
+import tsIcon from "../assets/typescript-icon.svg"
+import reactIcon from "../assets/react-icon.svg"
+import tailwindIcon from "../assets/tailwind-icon.svg"
 
 export function About() {
   return (
     <section>
-      <div id="about" className="relative h-fit flex flex-col items- my-12 z-0   ">
+      <div id="about" className="relative h-fit flex flex-col items- my-12 z-0 scroll-mt-24  ">
         <div className="absolute top-0 right-0 flex justify-center items-center font-bold text-sm h-9 min-w-36 w-[34vw] max-w-64 mt-6 -mr-[1px] rounded-l-full pr-3 z-10 transition-all ease-linear
-        bg-gradient-to-l from-indigo-900 to-indigo-600 shadow-middle-xl shadow-indigo-600
+        bg-gradient-to-l from-indigo-900 to-indigo-600 shadow-middle shadow-indigo-600
           md:text-lg  lg:right-0 
           lg:h-10 lg:text-xl
           xl:h-11 ">            
@@ -49,27 +51,40 @@ export function About() {
       </div>
 
       <div className="flex flex-col items-center overflow-hidden">
-        <h2 className="text-center font-bold tracking-wide text-lg my-4">Principais habilidades</h2>
-        <div className="flex flex-wrap justify-center gap-y-4 gap-x-5 transition-all duration-1000 lg:gap-x-7 xl:gap-x-10">
+        <h2 className="text-center font-bold tracking-wide text-lg my-4  lg:text-xl">
+          Habilidades técnicas
+        </h2>
+        <div className="flex flex-wrap justify-center gap-y-4 gap-x-5 py-4 transition-all duration-1000 lg:gap-x-7 xl:gap-x-10">
+
+          <SkillsCard 
+            icon={htmlIcon}
+            title={"HTML"}
+            bgStyle={"absolute -top-28  opacity-100"}
+          />
+          <SkillsCard 
+            icon={cssIcon}
+            title={"CSS"}
+            bgStyle={"absolute -top-44  opacity-100"}
+          />
           <SkillsCard 
             icon={jsIcon}
-            title={"Javascript"}
-            bgStyle={"-ml-30"}
+            title={"JavaScript"}
+            bgStyle={"absolute -top-0  opacity-100"}
           />
           <SkillsCard 
             icon={tsIcon}
-            title={"Typescript"}
-            bgStyle={"-ml-44"}
+            title={"TypeScript"}
+            bgStyle={"absolute -top-32 opacity-100 "}
           />
           <SkillsCard 
             icon={reactIcon}
-            title={"React"}
-            bgStyle={"-ml-8"}
+            title={"React JS"}
+            bgStyle={"absolute -top-10 opacity-100 "}
           />
           <SkillsCard 
             icon={tailwindIcon}
             title={"Tailwind"}
-            bgStyle={"-ml-20"}
+            bgStyle={"absolute -top-20 opacity-100 "}
           />
         </div>
       </div>

@@ -9,7 +9,7 @@ export function Home() {
   return ( 
     <div id="home" className=" min-h-full h- flex  items-end ">
       <div className="relative h-full w-full flex flex-col items-center z-10 pt-16 overflow-y-hidden  xl:flex-row xl:   ">
-        <StarsBackground />
+        <StarsBackground skillCardStyle='' />
 
         {/* presentation */}
         <div
@@ -101,10 +101,16 @@ export function Home() {
               <Github className="text-zinc-400 size-7 md:size-8 cursor-pointer" 
             />
             </Link>
-            <Link>
+            <Link
+              href="https://www.instagram.com/mttcorrea/"
+              target="_blank"
+            >
               <Instagram className="text-zinc-400 size-7 md:size-8 cursor-pointer" />
             </Link>
-            <Link>
+            <Link
+              href="https://www.linkedin.com/in/mtcorrea/"
+              target="_blank"
+            >
               <Linkedin className="text-zinc-400 size-7 md:size-8 cursor-pointer" />
             </Link>
           </div>
