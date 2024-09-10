@@ -1,7 +1,7 @@
 import { Github, Instagram, Linkedin } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 
-import homePhoto from "../assets/math-photo6.png";
+import homePhoto from "../assets/home-photo.png";
 import { Link } from "@nextui-org/link";
 import { StarsBackground } from "../components/stars-background";
 

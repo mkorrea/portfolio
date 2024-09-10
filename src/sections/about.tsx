@@ -3,12 +3,12 @@ import { SkillsCard } from "../components/skills-card";
 import { HandWaving } from "@phosphor-icons/react";
 
 import aboutPhoto from "../assets/about-photo.png"
-import htmlIcon from "../assets/html-icon.svg"
-import cssIcon from "../assets/css-icon.svg"
-import jsIcon from "../assets/javascript-icon.svg"
-import tsIcon from "../assets/typescript-icon.svg"
-import reactIcon from "../assets/react-icon.svg"
-import tailwindIcon from "../assets/tailwind-icon.svg"
+import htmlIcon from "../assets/icons/html-icon.svg"
+import cssIcon from "../assets/icons/css-icon.svg"
+import jsIcon from "../assets/icons/javascript-icon.svg"
+import tsIcon from "../assets/icons/typescript-icon.svg"
+import reactIcon from "../assets/icons/react-icon.svg"
+import tailwindIcon from "../assets/icons/tailwind-icon.svg"
 
 export function About() {
   return (
