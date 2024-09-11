@@ -34,16 +34,16 @@ export function Portfolio() {
             Projetos
           </div>
 
-          <div className="mt-20 w-4/6 mx-auto">
+          <div className="mt-20 w-full">
             <Swiper
               effect={'coverflow'}
               grabCursor={true}
               centeredSlides={true}
               slidesPerView={'auto'}
               coverflowEffect={{
-                rotate: 100,
+                rotate: 50,
                 stretch: 0,
-                depth: 1000,
+                depth: 1500,
                 modifier: 1,
                 slideShadows: false,
               }}
@@ -53,7 +53,7 @@ export function Portfolio() {
             >
               <SwiperSlide>
                 <div className="flex flex-col items-center justify-center w-fit">
-                  <img src={cashingMockup} alt="Imagem do Projeto" className="w-1/2 border"/>
+                  <img src={cashingMockup} alt="Imagem do Projeto" className="w-1/2 "/>
                   <h2 className="bg-bg-color ">Cashing</h2>
                   <p className="bg-bg-color ">Assistente financeiro para te ajudar a gerenciar suas finanças</p>
                 </div>
