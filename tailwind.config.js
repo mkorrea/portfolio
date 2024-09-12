@@ -13,10 +13,11 @@ export default {
         'merienda': 'Merienda'
       },
       colors: {
+        'bg-header': '#272E45',
         'bg-color': '#03050C',
         'bg-quote': '#030611',
+        'bg-project': '#0C0C21',
         'border': '#14162D',
-        'bg-header': '#272E45'
       },
       letterSpacing: {
         'wide': '.14rem',
@@ -30,7 +31,7 @@ export default {
       boxShadow: {
         'middle': '0px 0px 8px',
         'middle-xl': '0px 0px 20px',
-        'tech': '0px 0px 3px 1px, inset 0px 0px 12px',
+        'tech': '0px 0px 4px 1.5px, inset 0px 0px 12px',
         'tech-inset': ' inset 0px 0px 1px 1px',
       },
       transitionProperty: {

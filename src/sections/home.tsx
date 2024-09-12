@@ -7,7 +7,7 @@ import { StarsBackground } from "../components/stars-background";
 
 export function Home() {
   return ( 
-    <div id="home" className=" min-h-full h- flex  items-end ">
+    <section id="home" className=" min-h-full h- flex  items-end ">
       <div className="relative h-full w-full flex flex-col items-center z-10 pt-16 overflow-y-hidden  xl:flex-row xl:   ">
         <StarsBackground skillCardStyle='' />
 
@@ -116,6 +116,6 @@ export function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

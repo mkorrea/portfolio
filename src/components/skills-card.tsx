@@ -54,10 +54,10 @@ export function SkillsCard ({ icon, title, bgStyle }: SkillsCardProps) {
         rotateY,
         transformStyle: 'preserve-3d'
       }} 
-      className="relative flex justify-center items-center w-[150px] h-[122px] from-blue-500 from-25% to-indigo-600 to-75% bg-gradient-to-br shadow-tech-inset shadow-bg-color rounded-3xl  transition-transform duration-150 ease-linear
-        lg:w-[175px] lg:h-[141px] 
-        xl:w-[200px] xl:h-[160px] 
-        2xl:w-[225px]   
+      className="relative flex justify-center items-center max-w-full min-w-36 w-[30vw] h-[122px] from-blue-500 from-25% to-indigo-600 to-75% bg-gradient-to-br shadow-tech-inset shadow-bg-color rounded-3xl  transition-transform duration-75 ease-linear
+      md:w-[24vw] md:h-[141px] 
+      xl:w-[14vw] xl:h-[160px] 
+      2xl:h-[170px]
       "
     >
       <div 
@@ -65,17 +65,17 @@ export function SkillsCard ({ icon, title, bgStyle }: SkillsCardProps) {
           transform: 'translateZ(23px)',
           transformStyle: 'preserve-3d'
         }}
-        className="relative flex flex-col items-center justify-center w-[152px] h-[124px] bg-bg-color overflow-hidden shadow-tech shadow-bg-color rounded-3xl  transition-transform duration-150 ease-linear
-          lg:w-[177px] lg:h-[143px] 
-          xl:w-[202px] xl:h-[160px]
-          2xl:w-[227px]
+        className="relative flex flex-col items-center justify-center max-w-full min-w-36 w-[30vw] h-[124px] bg-bg-color overflow-hidden shadow-tech shadow-bg-color rounded-3xl  transition-transform duration-75 ease-linear
+        md:w-[24vw] md:h-[141px] 
+        xl:w-[14vw] xl:h-[160px] 
+        2xl:h-[170px]
         "
       >
         <div className="absolute flex flex-col items-center justify-center">
           <img
             src={icon}
             alt={title}
-            className="w-14 xl:w-16 2xl:w-20 transition-all duration-1000 text-zinc-100 z-30  "
+            className="w-16 lg:w-[72] xl:w-20 transition-all duration-1000 text-zinc-100 z-30  "
             />
           <h3
             className="text-xs [text-shadow:0px_0px_8px_#f4f4f5] shadow-red-500  lg:text-sm xl:text-md 2xl:text-lg  "

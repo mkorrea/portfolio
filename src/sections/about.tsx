@@ -31,8 +31,9 @@ export function About() {
           xl:right-[1.5vw]
           2xl:right-[5vw]
         ">
-          <p className="text-[2.7vw] text-zinc-300 text-center leading-loose max-w-[800px] 
-            sm:text-lg sm:leading-relaxed
+          <p className="text-xs text-zinc-300 text-center leading-loose max-w-[800px] 
+            sm:text-base sm:leading-relaxed
+            md:text-lg
             lg:text-xl lg:text-center lg:w-[40vw] lg:leading-normal 
             xl:w-[50vw]  
           ">
@@ -40,8 +41,9 @@ export function About() {
             Um entusiasta do código e das interfaces!
             Um <span className="text-zinc-100">desenvolvedor front-end</span> que ama transformar ideias em realidades digitais.
           </p>
-          <p className="text-[2.7vw] text-zinc-300 text-center leading-loose  
-            sm:text-lg sm:leading-relaxed
+          <p className="text-xs text-zinc-300 text-center leading-loose  
+            sm:text-base sm:leading-relaxed
+            md:text-lg
             lg:text-xl lg:w-[40vw] lg:max-w-[800px] lg:leading-normal
             xl:w-[50vw]
           ">
@@ -51,11 +53,10 @@ export function About() {
       </div>
 
       <div className="flex flex-col items-center overflow-hidden">
-        <h2 className="text-center font-bold tracking-wide text-lg my-4  lg:text-xl">
+        <h2 className="text-center font-bold tracking-wide text-lg my-4  lg:text-xl xl:text-2xl">
           Habilidades técnicas
         </h2>
-        <div className="flex flex-wrap justify-center gap-y-4 gap-x-5 py-4 transition-all duration-1000 lg:gap-x-7 xl:gap-x-10">
-
+        <div className="grid grid-cols-2 justify-center gap-y-4 gap-x-5 p-3 transition-all duration-1000 ease-linear md:grid-cols-3 xl:grid-cols-6 grid-transition ">
           <SkillsCard 
             icon={htmlIcon}
             title={"HTML"}
@@ -74,17 +75,17 @@ export function About() {
           <SkillsCard 
             icon={tsIcon}
             title={"TypeScript"}
-            bgStyle={"absolute -top-32 opacity-100 "}
+            bgStyle={"absolute -top-32 opacity-100"}
           />
           <SkillsCard 
             icon={reactIcon}
             title={"React JS"}
-            bgStyle={"absolute -top-10 opacity-100 "}
+            bgStyle={"absolute -top-10 opacity-100"}
           />
           <SkillsCard 
             icon={tailwindIcon}
             title={"Tailwind"}
-            bgStyle={"absolute -top-20 opacity-100 "}
+            bgStyle={"absolute -top-20 opacity-100"}
           />
         </div>
       </div>
