@@ -17,6 +17,7 @@ export default {
         'bg-color': '#03050C',
         'bg-quote': '#030611',
         'bg-project': '#0C0C21',
+        'bg-contact': '#050710',
         'border': '#14162D',
       },
       letterSpacing: {

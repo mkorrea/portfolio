@@ -3,6 +3,7 @@ import { Home } from "./sections/home";
 import { Quote } from "./sections/quote";
 import { About } from "./sections/about";
 import { Projects } from "./sections/projects";
+import { Contact } from "./sections/contact";
 
 
 
@@ -16,16 +17,10 @@ export function Portfolio() {
         <Quote />
         <About />
         <Projects />
+        <Contact />
 
 
-
-        <section
-          id="contact"
-          className="flex flex-col items-center justify-center bg-bg-project"
-        >
-          <h1 className="text-xl">Contato</h1>
-          <div className="h-44"></div>
-        </section>
+        
 
       </main>
     </div>

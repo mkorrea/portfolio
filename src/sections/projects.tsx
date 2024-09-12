@@ -14,7 +14,7 @@ import plannerMockup from "../assets/planner-mockup.png"
 export function Projects() {
 
   return(
-    <section id="projects" className="relative flex flex-col items- my-12 z-0 scroll-mt-24  bg-gradient-to-b from-bg-color via-bg-project to-bg-color  ">
+    <section id="projects" className="relative flex flex-col items- my-12 z-0 scroll-mt-16  bg-gradient-to-b from-bg-color via-bg-project to-bg-color ">
       <div className="absolute top-0 left-0 flex justify-center items-center font-bold text-sm h-9 min-w-36 w-[34vw] max-w-64 mt-6 -mr-[1px] rounded-r-full pr-3 z-10 transition-all ease-linear
       bg-gradient-to-l from-indigo-900 to-indigo-600 shadow-middle shadow-indigo-600
         md:text-lg  lg:right-0 
@@ -22,6 +22,8 @@ export function Projects() {
         xl:h-11 ">            
         Projetos
       </div>
+
+      <h2 className='mx-auto text-sm text-zinc-100 mt-20 -mb-16  md:mt-24 md:text-base xl:text-xl '>Veja os projetos em destaque</h2>
 
       <div className="mt-20 w-full">
         <Swiper
