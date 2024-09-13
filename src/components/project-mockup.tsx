@@ -17,14 +17,14 @@ export function ProjectMockup({ mockupImage, name, summary, description }: Proje
       </h2>
       
       <p className="w-8/12 xl:w-5/12 select-none text-[2.7vw] text-zinc-300 text-center leading-loose italic py-2
-        sm:text-lg 
+        sm:text-base 
         lg:text-xl lg:max-w-[800px] lg:leading-normal ">
         {summary}
       </p>
 
       <p className="w-9/12 xl:w-7/12 select-none text-[2.7vw] max-w-[65%] text-zinc-500 text-center leading-relaxed  
-        sm:text-base 
-        lg:text-lg lg:max-w-[1000px] lg:leading-normal ">
+        sm:text-sm 
+        lg:max-w-[1000px] lg:leading-normal ">
         {description}
       </p>
     </div>
