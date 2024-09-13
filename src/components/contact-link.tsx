@@ -16,7 +16,9 @@ export function ContactLink({ icon, link, children, handleMouseEnter, handleMous
       target="_blank"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="w-64 h-12 flex items-center text-zinc-100 gap-x-3 py-3 px-4 text-sm rounded-lg z-10 bg-bg-color border border-indigo-100 shadow-md shadow-zinc-700 hover:shadow-zinc-500 hover:bg-transparent hover:text-indigo-500 hover:scale-[101%] transition-all duration-100 ease-linear "
+      className="w-72 h-12 flex items-center text-zinc-100 gap-x-3 py-3 px-4 text-sm rounded-lg z-40 bg-bg-color/10 backdrop-blur-contact border border-indigo-100 shadow-md shadow-zinc-700 
+      hover:shadow-zinc-500 hover:bg-indigo-100 hover:text-indigo-600 hover:scale-[101%] 
+      transition-all duration-200 ease-linear "
     >
       {icon}
       <p className="flex flex-1  transition-all duration-100 ease-linear">{children}</p>

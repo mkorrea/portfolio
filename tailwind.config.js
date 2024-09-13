@@ -39,8 +39,7 @@ export default {
         'height': 'height'
       },
       backdropBlur: {
-        'header': '12px',
-        'header2': '5px'
+        'contact': '2px'
       },
       keyframes: {
         wave: {
@@ -57,8 +56,5 @@ export default {
       },
     }
   },
-  plugins: [
-    nextui(),
-    require('tailwind-scrollbar'),
-  ],
+  plugins: [nextui()],
 }

@@ -5,9 +5,6 @@ import { About } from "./sections/about";
 import { Projects } from "./sections/projects";
 import { Contact } from "./sections/contact";
 
-
-
-
 export function Portfolio() {
   return (
     <div className="flex items-center flex-col ">
@@ -18,10 +15,6 @@ export function Portfolio() {
         <About />
         <Projects />
         <Contact />
-
-
-        
-
       </main>
     </div>
   );
