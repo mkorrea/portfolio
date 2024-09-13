@@ -4,8 +4,11 @@ import { Typewriter } from "react-simple-typewriter";
 import homePhoto from "../assets/home-photo.png";
 import { Link } from "@nextui-org/link";
 import { StarsBackground } from "../components/stars-background";
+import { useTranslation } from "react-i18next";
 
 export function Home() {
+  const [ t ] = useTranslation("global")
+
   return ( 
     <section id="home" className=" min-h-full h- flex  items-end ">
       <div className="relative h-full w-full flex flex-col items-center z-10 pt-16 overflow-y-hidden  xl:flex-row xl:   ">
@@ -26,7 +29,7 @@ export function Home() {
             lg:text-2xl 
             transition-all ease-linear  duration-75 select-none "
           >
-            Olá! Eu me chamo
+            {t("home.hi")}
           </p>
           <span className="relative flex">
             <h1
@@ -62,7 +65,7 @@ export function Home() {
             transition-all ease-linear  duration-75 select-none "
           >
             <Typewriter
-              words={["Desenvolvedor Front-end"]}
+              words={[t("home.dev")]}
               loop={0}
               cursor
               typeSpeed={100}

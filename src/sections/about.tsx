@@ -1,5 +1,6 @@
-import { SkillsCard } from "../components/skills-card";
+import { useTranslation } from "react-i18next";
 
+import { SkillsCard } from "../components/skills-card";
 import { HandWaving } from "@phosphor-icons/react";
 
 import aboutPhoto from "../assets/about-photo.png"
@@ -13,6 +14,8 @@ import nodejsIcon from "../assets/icons/nodejs-icon.svg"
 import figmaIcon from "../assets/icons/figma-icon.svg"
 
 export function About() {
+  const [ t ] = useTranslation("global")
+
   return (
     <section>
       <div id="about" className="relative h-fit flex flex-col items- my-12 z-0 scroll-mt-24  ">
@@ -21,7 +24,7 @@ export function About() {
           md:text-lg  lg:right-0 
           lg:h-10 lg:text-xl
           xl:h-11 ">            
-          Sobre mim
+          {t("header.about")}
         </div>
         <img 
           src={aboutPhoto} 

@@ -1,0 +1,18 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "Language",
+    "langModal": {
+      "pt": "Portuguese",
+      "en": "English"
+    }  
+  },
+  "home": {
+    "hi": "Hello! I am",
+    "dev": "Front-end Developer"
+  },
+  "quote": "A good programmer is someone who always looks both ways before crossing a one-way street."
+}

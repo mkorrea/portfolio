@@ -2,11 +2,22 @@ import { Navbar, NavbarContent, NavbarBrand, NavbarMenuToggle, NavbarItem, Navba
 import { Home, User, Laptop, Mail, Languages } from "lucide-react";
 import { Link } from "@nextui-org/link";
 import { useState } from "react";
+import type { Selection } from "@nextui-org/react";
 
 import logo from "../assets/logo.png";
+import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/dropdown";
+import { useTranslation } from "react-i18next";
 
 export function Header() {
+  const [ t, i18n ] = useTranslation("global")
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [selectedKeys, setSelectedKeys] = useState<Selection>(new Set(["text"]));
+
+  const handleChangeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang)
+  }
   
   return (
     <Navbar
@@ -38,7 +49,7 @@ export function Header() {
           >
             <Home size={16} />
             <p className="font-semibold leading-4 text-xs sm:text-sm lg:text-base ">
-              Início
+            {t("header.home")}
             </p>
           </Link>
         </NavbarItem>
@@ -49,7 +60,7 @@ export function Header() {
           >
             <User size={16} />
             <p className="font-semibold leading-4 text-xs sm:text-sm lg:text-base  ">
-              Sobre mim
+              {t("header.about")}
             </p>
           </Link>
         </NavbarItem>
@@ -60,7 +71,7 @@ export function Header() {
           >
             <Laptop size={16} />
             <p className="font-semibold leading-4 text-xs sm:text-sm lg:text-base  ">
-              Projetos
+            {t("header.projects")}
             </p>
           </Link>
         </NavbarItem>
@@ -71,20 +82,33 @@ export function Header() {
           >
             <Mail size={16} />
             <p className="font-semibold leading-4 text-xs sm:text-sm lg:text-base  ">
-              Contato
+            {t("header.contact")}
             </p>
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            className="flex flex-col gap-y-1 w-24 items-center justify-center gap-x-2 text-zinc-100 md:w-28 lg:w-32 lg:flex-row transition-all ease-linear "
-            href="#home"
-          >
-            <Languages size={16} />
-            <p className="font-semibold leading-4 text-xs sm:text-sm lg:text-base  ">
-              Idioma
-            </p>
-          </Link>
+          <Dropdown className="bg-bg-color/50 backdrop-blur-md">
+            <DropdownTrigger>
+              <div className="flex flex-col gap-y-1 w-24 items-center justify-center gap-x-2 text-zinc-100 md:w-28 lg:w-32 lg:flex-row transition-all ease-linear cursor-pointer">
+                <Languages size={16} />
+                <p className="font-semibold leading-4 text-xs sm:text-sm lg:text-base"> {t("header.language")} </p>
+              </div>
+            </DropdownTrigger>
+            <DropdownMenu 
+              aria-label="Single selection example"
+              variant="flat"
+              disallowEmptySelection
+              selectionMode="single"
+              selectedKeys={selectedKeys}
+              onSelectionChange={setSelectedKeys}
+              
+            >
+              <DropdownItem key="text" onClick={()=> handleChangeLanguage("pt")}> {t("header.langModal.pt")} </DropdownItem>
+              <DropdownItem key="number" onClick={()=> handleChangeLanguage("en")}> {t("header.langModal.en")} </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+
+
         </NavbarItem>
       </NavbarContent>
 

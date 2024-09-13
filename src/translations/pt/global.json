@@ -1,0 +1,18 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "language": "Idioma",
+    "langModal": {
+      "pt": "Português",
+      "en": "Inglês"
+    }  
+  },
+  "home": {
+    "hi": "Olá! Eu me chamo",
+    "dev": "Desenvolvedor Front-end"
+  },
+  "quote": "Um bom programador é alguém que sempre olha para os dois lados antes de atravessar uma rua de mão única."
+}
