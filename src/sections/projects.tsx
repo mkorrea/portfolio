@@ -26,7 +26,7 @@ export function Projects() {
         {t("header.projects")}
       </div>
 
-      <h2 className='mx-auto text-sm text-zinc-100 mt-20 -mb-16  md:mt-24 md:text-base xl:text-xl '>{t("projects.title")}</h2>
+      <h2 className='mx-auto text-sm text-zinc-100 mt-24 -mb-16  md:mt-28 md:text-base xl:text-xl '>{t("projects.title")}</h2>
 
       <div className="mt-20 w-full">
         <Swiper

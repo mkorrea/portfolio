@@ -87,7 +87,7 @@ export function Header() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Dropdown className="bg-bg-color/50 backdrop-blur-md">
+          <Dropdown className="bg-bg-color/50 backdrop-brightness-200 backdrop-blur-md">
             <DropdownTrigger>
               <div className="flex flex-col gap-y-1 w-24 items-center justify-center gap-x-2 text-zinc-100 md:w-28 lg:w-32 lg:flex-row transition-all ease-linear cursor-pointer">
                 <Languages size={16} />
@@ -101,10 +101,9 @@ export function Header() {
               selectionMode="single"
               selectedKeys={selectedKeys}
               onSelectionChange={setSelectedKeys}
-              
             >
-              <DropdownItem key="text" onClick={()=> handleChangeLanguage("pt")}> {t("header.langModal.pt")} </DropdownItem>
-              <DropdownItem key="number" onClick={()=> handleChangeLanguage("en")}> {t("header.langModal.en")} </DropdownItem>
+              <DropdownItem key="text" onClick={()=> handleChangeLanguage("pt")} color="primary" className="  "> {t("header.langModal.pt")} </DropdownItem>
+              <DropdownItem key="number" onClick={()=> handleChangeLanguage("en")} color="primary" className=" focus:text-zinc-100"> {t("header.langModal.en")} </DropdownItem>
             </DropdownMenu>
           </Dropdown>
 
