@@ -37,30 +37,30 @@ export function About() {
           2xl:right-[5vw]
         ">
           <p className="text-xs text-zinc-300 text-center leading-loose max-w-[800px] 
-            sm:text-base sm:leading-relaxed
-            md:text-lg
-            lg:text-xl lg:text-center lg:w-[40vw] lg:leading-normal 
+            sm:text-sm sm:leading-relaxed
+            md:text-base
+            lg:text-lg lg:text-center lg:w-[40vw] lg:leading-normal 
             xl:w-[50vw]  
           ">
-            <HandWaving className="text-indigo-500 inline animate-wave size-4 sm:size-5 md:size-6 " /> Olá, sou <span className="text-indigo-500">Matheus</span>! <br/>
-            Um <span className="text-zinc-100">desenvolvedor front-end</span> apaixonado em tecnologia que ama transformar <span className="font-bold">ideias</span> em realidades digitais.
+            <HandWaving className="text-indigo-500 inline animate-wave size-4 sm:size-5 md:size-6 " /> {t("about.intro")} 
+            <span className="text-indigo-500"> Matheus</span>! <br/>
+            {t("about.intro2")}
           </p>
-          <p className="text-xs text-zinc-300 text-center leading-loose  
-            sm:text-base sm:leading-relaxed
-            md:text-lg
-            lg:text-xl lg:w-[40vw] lg:max-w-[800px] lg:leading-normal
+          <div className="text-xs text-zinc-300 text-center leading-loose flex flex-col gap-y-4 
+            sm:text-sm sm:leading-relaxed
+            md:text-base
+            lg:text-lg lg:w-[40vw] lg:max-w-[800px] lg:leading-normal
             xl:w-[50vw]
           ">
-            Com uma formação em <span className="text-indigo-500">Marketing</span>, desenvolvi a habilidade de entender as <span className="font-bold">necessidades dos usuários</span> e traduzi-las em interfaces criativas e amigáveis. Atualmente, estou em constante evolução no mundo da programação, sempre buscando novas ferramentas e tecnologias para aprimorar meu trabalho.<br/><br/>
-
-            Meu objetivo? Criar interfaces que sejam tão funcionais quanto um atalho de teclado e tão atraentes quanto uma noite de maratona de séries. Entre uma animação CSS e um script em JavaScript, estou sempre em busca daquele toque especial que vai deixar o site incrível.
-          </p>
+            <p>{t("about.journey")} <span className='text-indigo-500'>Marketing</span>{t("about.journey2")}</p>
+            <p>{t("about.journey3")}</p>
+          </div>
         </div>
       </div>
 
       <div className="flex flex-col items-center overflow-hidden">
         <h2 className="text-center font-bold tracking-wide text-lg my-4  lg:text-xl xl:text-2xl">
-          Habilidades técnicas
+          {t("about.skills")}
         </h2>
         <div className="grid grid-cols-2 justify-center gap-y-4 gap-x-5 p-3 transition-all duration-1000 ease-linear md:grid-cols-3 xl:grid-cols-4 grid-transition ">
           <SkillsCard 

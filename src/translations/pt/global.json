@@ -8,11 +8,40 @@
     "langModal": {
       "pt": "Português",
       "en": "Inglês"
-    }  
+    }
   },
+
   "home": {
     "hi": "Olá! Eu me chamo",
     "dev": "Desenvolvedor Front-end"
   },
-  "quote": "Um bom programador é alguém que sempre olha para os dois lados antes de atravessar uma rua de mão única."
+
+  "quote": "Um bom programador é alguém que sempre olha para os dois lados antes de atravessar uma rua de mão única.",
+
+  "about": {
+    "intro": "Olá, sou",
+    "intro2": " Um desenvolvedor front-end que ama tecnologia e programação, focado em transformar ideias em realidades digitais.",
+    "journey": "Minha jornada começou na área de",
+    "journey2": ", onde aprendi a compreender as necessidades dos usuários e a criar interfaces que realmente atendem às suas expectativas.",
+    "journey3": "Atualmente, estou sempre em busca de novas ferramentas e tecnologias para aprimorar minhas habilidades e oferecer soluções inovadoras. Quando não estou codando, você me encontra assistindo uma boa série ou explorando o mundo dos games.",
+    "skills": "Habilidades técnicas"
+  },
+
+  "projects": {
+    "title": "Veja os projetos em destaque",
+    "planner": {
+      "summary": "Seu planejamento de viagens, descomplicado e colaborativo.",
+      "description": "Plann.er é uma plataforma que torna o agendamento de viagens mais organizado e divertido. Com ela, você pode planejar todos os detalhes da viagem, adicionar lembretes, compartilhar com amigos ou familiares e garantir que tudo saia conforme o planejado."
+    },
+    "taskManage": {
+      "summary": "Gerencie seus serviços com facilidade e organização.",
+      "description": "Essa plataforma permite que o usuário crie uma conta para gerenciar serviços e tarefas. Ideal para empresas ou freelancers, a ferramenta facilita o controle de serviços em aberto, como manutenção, projetos ou qualquer tipo de atividade profissional, tudo em um só lugar."
+    },
+    "cashing": {
+      "summary": "Controle suas finanças de maneira simples e eficiente.",
+      "description": "Cashing é uma plataforma intuitiva para gerenciar suas anotações bancárias. Aqui, o usuário pode registrar ganhos, monitorar gastos e manter o controle completo das finanças pessoais de forma prática e organizada."
+    }
+  },
+
+  "curriculum": "Currículo"
 }

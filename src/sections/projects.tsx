@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { ProjectMockup } from "../components/project-mockup";
+import { useTranslation } from 'react-i18next';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -12,6 +13,7 @@ import dashboardMockup from "../assets/dashboard-mockup.png"
 import plannerMockup from "../assets/planner-mockup.png"
 
 export function Projects() {
+  const [ t ] = useTranslation("global")
 
   return(
     <section id="projects" className="relative flex flex-col items- my-12 z-0 scroll-mt-16  bg-gradient-to-b from-bg-color via-bg-project to-bg-color ">
@@ -20,10 +22,10 @@ export function Projects() {
         md:text-lg  lg:right-0 
         lg:h-10 lg:text-xl
         xl:h-11 ">            
-        Projetos
+        {t("header.projects")}
       </div>
 
-      <h2 className='mx-auto text-sm text-zinc-100 mt-20 -mb-16  md:mt-24 md:text-base xl:text-xl '>Veja os projetos em destaque</h2>
+      <h2 className='mx-auto text-sm text-zinc-100 mt-20 -mb-16  md:mt-24 md:text-base xl:text-xl '>{t("projects.title")}</h2>
 
       <div className="mt-20 w-full">
         <Swiper
@@ -46,24 +48,24 @@ export function Projects() {
             <ProjectMockup 
               mockupImage={plannerMockup}
               name="Plann.er"
-              summary="Seu planejamento de viagens, descomplicado e colaborativo."
-              description="Plann.er é uma plataforma que torna o agendamento de viagens mais organizado e divertido. Com ela, você pode planejar todos os detalhes da viagem, adicionar lembretes, compartilhar com amigos ou familiares e garantir que tudo saia conforme o planejado."
+              summary={t("projects.planner.summary")}
+              description={t("projects.planner.description")}
             />
           </SwiperSlide>
           <SwiperSlide>
             <ProjectMockup 
               mockupImage={dashboardMockup}
               name="TaskManage"
-              summary="Gerencie seus serviços com facilidade e organização."
-              description="Essa plataforma permite que o usuário crie uma conta para gerenciar serviços e tarefas. Ideal para empresas ou freelancers, a ferramenta facilita o controle de serviços em aberto, como manutenção, projetos ou qualquer tipo de atividade profissional, tudo em um só lugar."
+              summary={t("projects.taskManage.summary")}
+              description={t("projects.taskManage.description")}
             />
           </SwiperSlide>
           <SwiperSlide>
             <ProjectMockup 
               mockupImage={cashingMockup}
               name="Cashing"
-              summary="Controle suas finanças de maneira simples e eficiente."
-              description="Cashing é uma plataforma intuitiva para gerenciar suas anotações bancárias. Aqui, o usuário pode registrar ganhos, monitorar gastos e manter o controle completo das finanças pessoais de forma prática e organizada."
+              summary={t("projects.cashing.summary")}
+              description={t("projects.cashing.description")}
             />
           </SwiperSlide>
           

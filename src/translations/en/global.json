@@ -1,18 +1,47 @@
 {
   "header": {
     "home": "Home",
-    "about": "About me",
+    "about": "About Me",
     "projects": "Projects",
     "contact": "Contact",
     "language": "Language",
     "langModal": {
       "pt": "Portuguese",
       "en": "English"
-    }  
+    }
   },
+
   "home": {
-    "hi": "Hello! I am",
+    "hi": "Hello! My name is",
     "dev": "Front-end Developer"
   },
-  "quote": "A good programmer is someone who always looks both ways before crossing a one-way street."
+
+  "quote": "A good programmer is someone who always looks both ways before crossing a one-way street.",
+
+  "about": {
+    "intro": "Hello, I am",
+    "intro2": " a front-end developer who loves technology and programming, focused on turning ideas into digital realities.",
+    "journey": "My journey began in the field of",
+    "journey2": ", where I learned to understand user needs and create interfaces that truly meet their expectations.",
+    "journey3": "Currently, I am always on the lookout for new tools and technologies to enhance my skills and offer innovative solutions. When I’m not coding, you’ll find me watching a good series or exploring the world of games.",
+    "skills": "Technical Skills"
+  },
+
+  "projects": {
+    "title": "Check out the featured projects",
+    "planner": {
+      "summary": "Your travel planning, simplified and collaborative.",
+      "description": "Plann.er is a platform that makes trip scheduling more organized and fun. With it, you can plan all the details of your trip, add reminders, share with friends or family, and ensure everything goes according to plan."
+    },
+    "taskManage": {
+      "summary": "Manage your services with ease and organization.",
+      "description": "This platform allows users to create an account to manage services and tasks. Ideal for businesses or freelancers, the tool facilitates the control of open services such as maintenance, projects, or any type of professional activity, all in one place."
+    },
+    "cashing": {
+      "summary": "Control your finances in a simple and efficient way.",
+      "description": "Cashing is an intuitive platform for managing your bank notes. Here, users can record earnings, monitor expenses, and maintain complete control of personal finances in a practical and organized manner."
+    }
+  },
+
+  "curriculum": "Resume"
 }
