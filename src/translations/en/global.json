@@ -40,6 +40,11 @@
     "cashing": {
       "summary": "Control your finances in a simple and efficient way.",
       "description": "Cashing is an intuitive platform for managing your bank notes. Here, users can record earnings, monitor expenses, and maintain complete control of personal finances in a practical and organized manner."
+    },
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "summary": "My personal portfolio, built with React, TypeScript, and Tailwind CSS, featuring responsive design and clean code.",
+      "description": "This is my personal portfolio, developed with React, TypeScript, and Tailwind CSS. The site focuses on responsive design and accessibility, following clean code practices to ensure clean and efficient code. The design is minimalistic and modern, providing a smooth and intuitive user experience."
     }
   },
 

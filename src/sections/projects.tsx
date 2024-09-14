@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import cashingMockup from "../assets/cashing-mockup.png"
 import dashboardMockup from "../assets/dashboard-mockup.png"
 import plannerMockup from "../assets/planner-mockup.png"
+import portfolioMockup from "../assets/portfolio-mockup.png"
 
 export function Projects() {
   const [ t ] = useTranslation("global")
@@ -66,6 +67,14 @@ export function Projects() {
               name="Cashing"
               summary={t("projects.cashing.summary")}
               description={t("projects.cashing.description")}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjectMockup 
+              mockupImage={portfolioMockup}
+              name={t("projects.portfolio.title")}
+              summary={t("projects.portfolio.summary")}
+              description={t("projects.portfolio.description")}
             />
           </SwiperSlide>
           
