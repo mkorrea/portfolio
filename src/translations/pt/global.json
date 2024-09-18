@@ -44,7 +44,7 @@
     "portfolio": {
       "title": "Portfólio pessoal",
       "summary": "Meu portfólio pessoal, criado com React, TypeScript e Tailwind CSS, com design responsivo e clean code.",
-      "description": "Este é meu portfólio pessoal, desenvolvido com React, TypeScript e Tailwind CSS. O site foca em design responsivo e acessibilidade, seguindo práticas de clean code para garantir um código limpo e eficiente. O design é minimalista e moderno, proporcionando uma experiência de usuário suave e intuitiva."
+      "description": "O site foca em design responsivo e acessibilidade, seguindo práticas de clean code para garantir um código limpo e eficiente. O design é minimalista e moderno, proporcionando uma experiência de usuário suave e intuitiva."
     }
   },
 

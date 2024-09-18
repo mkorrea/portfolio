@@ -62,7 +62,7 @@ export function SkillsCard ({ icon, title, bgStyle }: SkillsCardProps) {
     >
       <div 
         style={{
-          transform: 'translateZ(23px)',
+          transform: 'translateZ(27px)',
           transformStyle: 'preserve-3d'
         }}
         className="relative flex flex-col items-center justify-center max-w-full min-w-36 w-[30vw] h-[124px] bg-bg-color overflow-hidden shadow-tech shadow-bg-color rounded-3xl  transition-transform duration-75 ease-linear
