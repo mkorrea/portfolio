@@ -4,7 +4,6 @@ import { useState } from "react";
 import { StarsBackground } from "../components/stars-background";
 import { Typewriter } from "react-simple-typewriter";
 import { ContactLink } from "../components/contact-link";
-import { Link } from "@nextui-org/link";
 import { useTranslation } from "react-i18next";
 
 export function Contact() {
