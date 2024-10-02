@@ -78,8 +78,8 @@ export function Contact() {
           </ContactLink>
         </div>
         <a
-          href="curriculo-matheuscorrea.pdf"
-          download="curriculo-matheuscorrea.pdf"
+          href="Matheus-Correa-CV.pdf"
+          download="Matheus-Correa-CV.pdf"
           className="w-72 h-12 flex items-center text-zinc-100 gap-x-3 py-3 px-4 text-sm rounded-lg z-10 bg-bg-project border border-indigo-600 shadow-md shadow-indigo-900 hover:shadow-indigo-800 hover:bg-bg-project/90 hover:scale-[101%] transition-all duration-100 ease-linear cursor-pointer "
         >
           <File size={17} />
