@@ -23,7 +23,6 @@ export function Header() {
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
       className={`fixed max-w-[1920px] mx-auto w-full backdrop-blur-lg bg-bg-color/50 shadow-xl shadow-bg-color/50 flex justify-center`}
-      shouldHideOnScroll
       isBlurred={false}
       isBordered
     >
@@ -77,7 +76,7 @@ export function Header() {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="flex flex-col gap-y-1 w-24 items-center justify-center gap-x-2 text-zinc-100 md:w-28 lg:w-32 lg:flex-row transition-all ease-linear  bg-indigo-600 py-2 -my-2 rounded-lg shadow-[0px_0px_8px] shadow-indigo-800"
+            className="flex flex-col gap-y-1 w-24 items-center justify-center gap-x-2 text-zinc-100 md:w-28 lg:w-32 lg:flex-row transition-all ease-linear "
             href="#contact"
           >
             <Mail size={16} />
@@ -106,21 +105,20 @@ export function Header() {
               <DropdownItem key="number" onClick={()=> handleChangeLanguage("en")} color="primary" className=" focus:text-zinc-100"> {t("header.langModal.en")} </DropdownItem>
             </DropdownMenu>
           </Dropdown>
-
-
         </NavbarItem>
       </NavbarContent>
 
 
       {/* menu mobile */}
-      <NavbarMenu className="backdrop-blur-md bg-bg-color/30 py-6 flex gap-y-8 overflow-y-hidden">
+      <NavbarMenu className="backdrop-blur-md bg-bg-color/30 py-6 max-h-fit flex gap-y-8 overflow-y-hidden">
         <NavbarMenuItem>
           <Link
             className="flex items-center gap-x-2 justify-center text-zinc-100"
             href="#home"
+            onClick={() => setIsMenuOpen(false)}
           >
             <Home size={16} />
-            <p className="font-semibold leading-4 ">Início</p>
+            <p className="font-semibold leading-4 ">{t("header.home")}</p>
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
@@ -130,7 +128,7 @@ export function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             <User size={16} />
-            <p className="font-semibold leading-4  ">Sobre mim</p>
+            <p className="font-semibold leading-4  ">{t("header.about")}</p>
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
@@ -139,26 +137,38 @@ export function Header() {
             href="#projects"
           >
             <Laptop size={16} />
-            <p className="font-semibold leading-4  ">Projetos</p>
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            className="flex items-center gap-x-2 justify-center text-zinc-100 bg-indigo-600 py-2 -my-2 rounded-lg shadow-[0px_0px_8px] shadow-indigo-800"
-            href="#contact"
-          >
-            <Mail size={16} />
-            <p className="font-semibold leading-4  ">Contato</p>
+            <p className="font-semibold leading-4  ">{t("header.projects")}</p>
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
           <Link
             className="flex items-center gap-x-2 justify-center text-zinc-100"
-            href="#home"
+            href="#contact"
           >
-            <Languages size={16} />
-            <p className="font-semibold leading-4  ">Idioma</p>
+            <Mail size={16} />
+            <p className="font-semibold leading-4  ">{t("header.contact")}</p>
           </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Dropdown className="bg-bg-color/50 backdrop-brightness-200 backdrop-blur-md">
+            <DropdownTrigger>
+              <div className="flex items-center gap-x-2 justify-center text-zinc-100 cursor-pointer">
+                <Languages size={16} />
+                <p className="font-semibold leading-4 text-base"> {t("header.language")} </p>
+              </div>
+            </DropdownTrigger>
+            <DropdownMenu 
+              aria-label="Single selection example"
+              variant="flat"
+              disallowEmptySelection
+              selectionMode="single"
+              selectedKeys={selectedKeys}
+              onSelectionChange={setSelectedKeys}
+            >
+              <DropdownItem key="text" onClick={()=> handleChangeLanguage("pt")} color="primary" className="  "> {t("header.langModal.pt")} </DropdownItem>
+              <DropdownItem key="number" onClick={()=> handleChangeLanguage("en")} color="primary" className=" focus:text-zinc-100"> {t("header.langModal.en")} </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
